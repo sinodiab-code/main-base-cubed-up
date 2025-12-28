@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cubed up main base</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+</head>
+<body>
+<div class="top-bg">
+   
+    <form>
+    <input   type="text" id="searchbar" placeholder="what are you looking for">
+    <img  src="search icon.jpg" width="20"height="20"> 
+    <br><br>
+    <input class="button" type="button" value="search"onclick="search()">
+    <p id="notfound"></p>    
+</form>
+
+    <h1 class="upper"><mark> somthing from</mark> cubed up</h1>
+    
+</div>
+  
+<br>
+<br>
+<br>
+<a href="3x3 beginer tutorial.html"><img id="3x3" src="beginers tutorial.png" width="300" height="300"class="zoom-img" ></a>
+<a href="f2l .html"><img src="F2L.png" width="300" height="300"class="zoom-img" ></a>
+<a href="oll.html"><img src="OLL_step.png" width="300" height="300"class="zoom-img" > </a>
+<a href="pll.html" ><img src="pll.png" width="300" height="300"class="zoom-img" > </a>   
+<a href="cfop.html"><img src="cfop.png" width="300" height="300"class="zoom-img" ></a>
+</body>
+<style>
+body {background-color: rgb(66, 66, 66);}
+
+
+.zoom-img {
+    width: 200px;        
+    transition: transform 0.3s ease;
+margin-right: 1.5%;
+margin-left: 1.5%;
+}
+
+.zoom-img:hover {
+    transform: scale(1.2);  
+}
+#notfound{
+
+    color: rgb(129, 3, 3);
+}
+
+.top-bg {
+    width: 100%;
+    height: 200px; /* height of the top image area */
+    background-image: url("header.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.button{
+    background-color: lightseagreen;
+border-radius: 8px;
+
+}
+
+
+</style>
+<script>
+
+
+
+function search() {
+    let searchbar = document.getElementById("searchbar").value.toLowerCase();
+
+    if (
+        searchbar === "3x3 begginers tutorial" ||
+        searchbar === "rubicks cube begginer tutorial" ||
+        searchbar === "3x3 begginer tutorial"
+    ) {
+        window.open = "3x3 begginer tutorial.html";
+    }
+     if (
+        searchbar === "3x3 cfop tutorial" ||
+        searchbar === "cfop tutorial" ||
+        searchbar === "advanced cfop tutorial"||
+        searchbar === "cfop"
+    ) {
+        window.open = "cfop.html";
+    }
+    else if (
+        searchbar === "f2l" ||
+        searchbar === "advanced f2l" ||
+        searchbar === "f2l tutorial"
+    ) {
+        window.location.href = "f2l.html";
+    }
+
+    else if (
+        searchbar === "oll" ||
+        searchbar === "oll algorithms" ||
+        searchbar === "advanced oll" ||
+        searchbar === "oll tutorial"
+    ) {
+        window.location.href = "oll.html";
+    }
+
+    else if (
+        searchbar === "pll" ||
+        searchbar === "pll algorithms" ||
+        searchbar === "advanced pll" ||
+        searchbar === "pll tutorial"
+    ) {
+        window.location.href = "pll.html";
+    }
+
+    else {
+        document.getElementById("notfound").innerHTML = "Not Found";
+    }
+}
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</html>
